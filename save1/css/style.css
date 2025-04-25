@@ -1,0 +1,20 @@
+:root {
+  --vert: #2F4F4F;
+  --blanc: #F8F8F0;
+  --brun: #6F4E37;
+  --dore: #C0A060;
+  --gris: #DADADA;
+  --transition: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: var(--blanc);
+  color: var(--vert);
+}

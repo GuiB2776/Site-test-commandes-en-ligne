@@ -1,0 +1,74 @@
+/*--------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------/* FOOTER /*-----------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+/*---------------------------------------------------/* SOCKET /*-----------------------------------------------*/
+
+.socket 
+{
+  background-color: #000000;
+  padding: 15px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.socket-left,
+.socket-center,
+.socket-right 
+{
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+.socket-center a,
+.socket-right a 
+{
+  margin-left: 10px;
+}
+
+.borderSocket
+{
+  border: black 2px;
+}
+.borderSocket a#cgu-link
+{
+  text-decoration: none;
+}
+
+.lienSocket { text-decoration: none; color: grey; transition: color 0.3s ease; }
+.lienSocket:hover { color: #ffffff; }
+
+a#cgu-link { text-decoration: none; color: grey; transition: color 0.3s ease; }
+a#cgu-link:hover { color: #ffffff; }
+
+a#rgpd-link { text-decoration: none; color: grey; transition: color 0.3s ease; }
+a#rgpd-link:hover { color: #ffffff; }
+
+/*--------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------/* FOOTER /*-----------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/*
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #023e8a;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: #90e0ef;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+*/
