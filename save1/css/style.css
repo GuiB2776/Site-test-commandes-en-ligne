@@ -1,3 +1,7 @@
+/*--------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------/* GENERAL /*------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+
 :root {
   --vert: #2F4F4F;
   --blanc: #F8F8F0;
@@ -17,4 +21,50 @@ body {
   font-family: 'Lato', sans-serif;
   background-color: var(--blanc);
   color: var(--vert);
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------/* MAIN /*-------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+
+main{
+  max-width: 1200px;
+  padding-top: 70px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------/* SCROLL TOP BUTTON /*-------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/* Bouton "Retour en haut" */
+#scrollToTop {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  background-color: #0077b6; /* Bleu principal */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+  visibility: hidden; /* Caché par défaut */
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
+
+/* Affichage du bouton lorsque visible */
+#scrollToTop.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Survol du bouton */
+#scrollToTop:hover {
+  background-color: #005f8a; /* Bleu foncé au survol */
 }
