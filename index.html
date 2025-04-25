@@ -10,69 +10,115 @@
   <meta name="keywords" content="...">        
   <meta name="robots" content="index, follow">
   <meta name="googlebot" content="index, follow">
-  <!-- POLICE D'ECRITURE -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <!-- FICHIERS CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/menuNav.css">
+  <link rel="stylesheet" href="css/scrollTopBtn.css">
   <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/accueil.css">
   <!-- FICHIERS JS defer -->
   <script defer src="js/menuNav.js"></script>
-  <script src="js/footer.js"></script>
 </head>
 <body>
   <header>
     <nav id="nav"></nav>
   </header>
 
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Éveillez vos sens <br> avec <br> Sulawesi</h1>
+      <p>Huiles essentielles & cafés biologiques, <br> issus d'Indonésie.</p>
+      <a href="produits.html" class="btn btn-primary">Découvrir nos produits</a>
+    </div>
+  </section>
+
   <main>
-    <h1>Bienvenue sur le site</h1>
-    <p> TESt TEST</p>
-    <br><br><br>
-    <p> TESt TEST</p>
-    <br><br><br>
-    <p> TESt TEST</p>
-    <br><br><br>
-    <p> TESt TEST</p>
-    <br><br><br>
-    <p> TESt TEST</p>
-    <br><br><br>
-    <p> TESt TEST</p>
-    <br><br><br>
-    <p> TESt TEST</p>
-    <br><br><br>
-    <p> TESt TEST</p>
-    <br><br><br>
-    <p> TESt TEST</p>
-    <br><br><br>
-    <p> TESt TEST</p>
-    <br><br><br>
-    <p> TESt TEST</p>
-    <br><br><br>
-    <p> TESt TEST</p>
-    <br><br><br>
-    <p> TESt TEST</p>
-    <br><br><br>
+  
+    <!-- Trois piliers / arguments -->
+    <section class="features">
+      <div class="feature">
+        <img src="img/icn-bio.svg" alt="Bio">
+        <h3>100 % Bio</h3>
+        <p>Certifié agriculture biologique.</p>
+      </div>
+      <div class="feature">
+        <img src="img/icn-fairtrade.svg" alt="Équitable">
+        <h3>Commerce Équitable</h3>
+        <p>Soutien direct aux producteurs de Sulawesi.</p>
+      </div>
+      <div class="feature">
+        <img src="img/icn-premium.svg" alt="Premium">
+        <h3>Qualité Premium</h3>
+        <p>Récolte et extraction haut de gamme.</p>
+      </div>
+    </section>
+  
+    <!-- 3. Sélection de produits clés -->
+    <section class="product-highlight">
+      <h2>Nos coups de cœur</h2>
+      <div class="product-grid">
+        <article class="product-card">
+          <img src="img/huile-lavande.jpg" alt="Huile de Lavande">
+          <h4>Huile de Lavande</h4>
+          <a href="huiles-essentielles.html" class="btn btn-secondary">En savoir plus</a>
+        </article>
+        <article class="product-card">
+          <img src="img/cafe-arabica.jpg" alt="Café Arabica">
+          <h4>Café Arabica</h4>
+          <a href="cafe.html" class="btn btn-secondary">En savoir plus</a>
+        </article>
+      </div>
+    </section>
+  
+    <!-- Témoignages clients B2C -->
+    <section class="testimonial">
+      <blockquote>
+        “Les arômes sont incroyables et la qualité irréprochable !”  
+        <cite>— Claire D.</cite>
+      </blockquote>
+    </section>
+
+    <!-- PARTENAIRES B2B -->
+    <section class="testimonial">
+      <blockquote>
+        “Les arômes sont incroyables et la qualité irréprochable !”  
+        <cite>— Claire D.</cite>
+      </blockquote>
+    </section>
+  
   </main>
 
-  <div id="scrollToTop"> <!-- SCROLL TOP BUTTON -->
-    &#8679; <!-- Flèche vers le haut -->
-  </div>
-
   <footer>  <!-- FOOTER & SOCKET -->
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+      <h2>Restez informé·e</h2>
+      <p>Inscrivez vous à notre newsletter mensuelle pour suivre nos avancements et projets.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Votre adresse e-mail" required>
+        <button type="submit" class="btn btn-primary">Je m’inscris</button>
+      </form>
+    </section>
+    <!-- SCROLL TOP BUTTON -->
+    <div id="scrollToTop">
+      &#8679; <!-- Flèche vers le haut -->
+    </div>
+    <!-- SOCKET -->
     <div class="socket" class="borderSocket">
         <div class="socket-left">
-            <a class="lienSocket" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank"> <span id="site-name"> </span> </a> &copy; <span id="copyright"></span> | Tous droits réservés. 
+            <a href="#" id="copyright-link" target="_blank"> <span id="site-name"> </span> </a> &copy; <span id="copyright"></span> <span id="copyright-text"></span> 
         </div>
         <div class="socket-center">
-            <a href="cgu.html" id="cgu-link"> Conditions Générales d'Utilisation </a>
+            <a href="#" id="cgu-link"> <span id="cgu-text"></span> </a>
         </div>
         <div class="socket-right">
-            <a href="rgpd.html" id="rgpd-link"> Politique de Confidentialité (RGPD)</a>
+            <a href="#" id="rgpd-link"> <span id="rgpd-text"></span></a>
         </div>
     </div>
-    <div class="siteManager"> Site propulsé par <a class="lienSocket" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank"> Guillaume BULLET </div>
+    <div id="siteManager"> Site propulsé par <a id="siteManager-link" href="#" target="_blank"> <span id="siteManager-text"></span> </div>
 </footer>
+
+  <script src="js/scrollTopBtn.js"></script>
+  <script src="js/footer.js"></script>
 
 </body>
 </html>

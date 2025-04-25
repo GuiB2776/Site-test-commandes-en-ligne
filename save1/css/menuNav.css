@@ -51,7 +51,13 @@ nav .nav-links li .dropdown-toggle {
   transition: color var(--transition);
   font-size: 1rem;
   line-height: 1.2;
+  padding-left: 1.5rem;
 }
+
+nav .nav-links li .dropdown-toggle & .dropdown-toggle-3 {
+  padding-left: 0.1rem;
+}
+
 nav .nav-links li a:hover,
 nav .nav-links li .dropdown-toggle:hover {
   color: var(--dore);
@@ -147,6 +153,44 @@ nav .nav-links .has-dropdown.open > .dropdown {
   nav .nav-links .has-dropdown:hover > .dropdown-toggle::after {
     transform: translateY(-50%) rotate(180deg);
   }
+  /* niveau 2 et 3 : positionnement à droite */
+  nav .nav-links .dropdown .has-dropdown {
+    position: relative;
+  }
+  nav .nav-links .dropdown .has-dropdown > .dropdown {
+    display: none;          /* caché par défaut */
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: var(--blanc);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    min-width: 180px;
+    transition: opacity .2s ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* afficher au hover ou si JS a mis .open */
+  nav .nav-links .dropdown .has-dropdown:hover > .dropdown,
+  nav .nav-links .dropdown .has-dropdown.open   > .dropdown {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+  /* un peu plus d’espace pour chaque lien imbriqué */
+  nav .nav-links .dropdown .dropdown li a {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+  }
+  /* Override du padding-left pour les dropdown imbriqués */
+  nav .nav-links li.has-dropdown li.has-dropdown > .dropdown-toggle {
+    padding-left: 1.5rem;
+  }
+  nav .nav-links li.has-dropdown li.has-dropdown li.has-dropdown > .dropdown-toggle {
+    padding-left: 1rem;
+    padding-bottom: 0.2rem;
+  }
 }
 
 /*---------------------------------------------------------------------------------------------------------------------*/
@@ -234,6 +278,7 @@ nav .nav-links .has-dropdown.open > .dropdown {
   }
   /* Afficher le burger */
   .burger {
+
     display: flex;
   }
   /* Petite flèche pivotante sur le toggle */
@@ -252,5 +297,14 @@ nav .nav-links .has-dropdown.open > .dropdown {
   nav .nav-links .has-dropdown.open > .dropdown-toggle::after,
   nav .nav-links .has-dropdown:hover > .dropdown-toggle::after {
     transform: translateY(-50%) rotate(180deg);
+  }
+  /* indentation pour les niveaux supérieurs du dropdown*/
+  nav .nav-links .dropdown .has-dropdown > .dropdown {
+    display: none;
+    position: static;
+    padding-left: 2rem;
+  }
+  nav .nav-links .dropdown .has-dropdown.open > .dropdown {
+    display: block;
   }
 }

@@ -6,6 +6,9 @@ footer {
   width: 100%;
 }
 
+.lienFooter { text-decoration: none; color: grey; transition: color 0.3s ease; }
+.lienFooter:hover { color: #ffffff; }
+
 /*---------------------------------------------------/* SOCKET /*-----------------------------------------------*/
 
 .socket 
@@ -40,44 +43,17 @@ footer {
   text-decoration: none;
 }
 
-.lienSocket { text-decoration: none; color: grey; transition: color 0.3s ease; }
-.lienSocket:hover { color: #ffffff; }
+/*---------------------------------------------------/* SOCKET JAVASCRIPT /*-----------------------------------------------*/
 
-a#cgu-link { text-decoration: none; color: grey; transition: color 0.3s ease; }
+a#copyright-link {text-decoration: none; color: grey; transition: color 0.5s ease; }
+a#copyright-link:hover { color: #ffffff; }
+
+a#cgu-link { text-decoration: none; color: grey; transition: color 0.5s ease; }
 a#cgu-link:hover { color: #ffffff; }
 
-a#rgpd-link { text-decoration: none; color: grey; transition: color 0.3s ease; }
+a#rgpd-link { text-decoration: none; color: grey; transition: color 0.5s ease; }
 a#rgpd-link:hover { color: #ffffff; }
 
-/*---------------------------------------------------/* SITE MANAGER /*-----------------------------------------------*/
-
-.siteManager { 
-  text-align: center;
-  background-color: #000000;
-  font-size: 10px;
-}
-
-/*--------------------------------------------------------------------------------------------------------------*/
-/*---------------------------------------------------/* FOOTER /*-----------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-
-/*
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #023e8a;
-  color: white;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-footer a {
-  color: #90e0ef;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-*/
+#siteManager { text-align: center; background-color: #000000; font-size: 10px; padding-bottom: 5px; }
+a#siteManager-link { text-decoration: none; color: grey; transition: color 0.5s ease; }
+a#siteManager-link:hover { color: #ffffff; }

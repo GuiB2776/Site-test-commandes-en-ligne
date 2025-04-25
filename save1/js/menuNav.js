@@ -1,35 +1,62 @@
-// — menuNav.js — 
 (function() {
   const nav = document.getElementById('nav');
   nav.innerHTML = `
+
     <div class="logo">
-      <a href="index.html">Sulawesi Fair Trade</a>
+      <a href="index.html">Sulawesi Biological Oil</a>
     </div>
 
-    <button id="burger" class="burger"
-            aria-label="Ouvrir le menu"
-            aria-expanded="false"
-            aria-controls="nav-links">
+    <button id="burger" class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
       <span></span><span></span><span></span>
     </button>
 
     <ul id="nav-links" class="nav-links">
+
       <li><a href="index.html">Accueil</a></li>
+      
+      <!--------------- 1ᵉ niveau --------------->
       <li class="has-dropdown">
-        <button class="dropdown-toggle"
-                aria-expanded="false">
+        <button class="dropdown-toggle" aria-expanded="false">
           Produits
         </button>
         <ul class="dropdown">
-          <li><a href="produits.html">Tous les produits</a></li>
-          <li><a href="huiles-essentielles.html">Huiles essentielles</a></li>
+          <li><a href="produits.html">Tous nos produits</a></li>
+
+          <!--------------- 2ᵉ niveau --------------->
+          <li class="has-dropdown">
+            <button class="dropdown-toggle" aria-expanded="false">
+              Huiles essentielles
+            </button>
+            <ul class="dropdown">
+              
+              <!--------------- 3ᵉ niveau --------------->
+              <li class="has-dropdown">
+                <button class="dropdown-toggle dropdown-toggle-3" aria-expanded="false">
+                  Citrus
+                </button>
+                <ul class="dropdown">
+                  <li><a href="orange.html">Orange douce</a></li>
+                  <li><a href="citron.html">Citron</a></li>
+                </ul>
+              </li>
+              
+              <li><a href="menthe.html">Menthe poivrée</a></li>
+              <li><a href="lavande.html">Lavande</a></li>
+            </ul>
+          </li>
+
           <li><a href="cafe.html">Café</a></li>
         </ul>
       </li>
+
       <li><a href="a-propos.html">À propos</a></li>
+
       <li><a href="contact.html">Contact</a></li>
+
       <li><a href="cgu-cgv.html">CGU & CGV</a></li>
+
     </ul>
+
   `;
 
   const burger      = document.getElementById('burger');
@@ -52,16 +79,23 @@
   });
 
   // Pour chaque dropdown, gestion du clic
-  dropdownToggles.forEach(btn => {
-    btn.addEventListener('click', e => {
-      const li = btn.parentElement;               // <li class="has-dropdown">
-      const isOpen = li.classList.toggle('open'); // ajoute ou enlève .open
-      btn.setAttribute('aria-expanded', isOpen);
-      e.stopPropagation();                        // ne pas fermer le menu global
+  navLinks.querySelectorAll('.has-dropdown')
+    .forEach(li => {
+      li.addEventListener('click', e => {
+        // ne se déclenche que si mobile
+        if (window.innerWidth <= 768) {
+          // empêcher le lien par défaut et la bulle d'événement
+          e.preventDefault();
+          e.stopPropagation();
+          // même logique que pour le bouton
+          const btn = li.querySelector('.dropdown-toggle');
+          const isOpen = li.classList.toggle('open');
+          btn.setAttribute('aria-expanded', isOpen);
+        }
+      });
     });
-  });
 
-  // Fermer dropdown si on clique en dehors (desktop)
+  // Fermer dropdown si on clique en dehors
   document.addEventListener('click', (e) => {
     if (!nav.contains(e.target)) {
       dropdownToggles.forEach(btn => {

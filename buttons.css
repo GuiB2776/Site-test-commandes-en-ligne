@@ -1,0 +1,35 @@
+/*--------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------/* BOUTONS /*------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------/* GENERAL /*------------------------------------------------*/
+.btn {
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: background var(--transition), color var(--transition);
+}
+
+/*-------------------------------------------------/* STYLE 1 /*------------------------------------------------*/
+.btn-primary {
+    background-color: var(--vert);
+    color: var(--blanc);
+    padding: 0.75rem 1.5rem;
+}
+.btn-primary:hover {
+    background-color: var(--dore);
+    color: var(--blanc);
+}
+/*-------------------------------------------------/* STYLE 2 /*------------------------------------------------*/
+.btn-secondary {
+    background: none;
+    border: 2px solid var(--vert);
+    color: var(--vert);
+    padding: 0.65rem 1.3rem;
+}
+.btn-secondary:hover {
+    background-color: var(--vert);
+    color: var(--blanc);
+}
