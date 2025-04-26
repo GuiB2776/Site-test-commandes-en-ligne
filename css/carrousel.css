@@ -1,0 +1,71 @@
+/* SECTION */
+.carrousel {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  .carrousel h2 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: var(--brun);
+  }
+  
+  /* CARROUSEL */
+  .carrousel-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .carrousel-piste-conteneur {
+    overflow: hidden;
+  }
+  
+  .carrousel-piste {
+    display: flex;
+    transition: transform 0.5s ease;
+    list-style: none;      /* SUPPRIMER LES PUCES */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .carrousel-item {
+    flex: 0 0 auto;
+    width: 120px;
+    margin: 0 1rem;
+  }
+  .carrousel-item img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* BOUTONS */
+  .carrousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.8);
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    z-index: 10;
+  }
+  .carrousel-btn:hover {
+    background: rgba(255,255,255,1);
+  }
+  .carrousel-btn.precedent {
+    left: 0;
+  }
+  .carrousel-btn.suivant {
+    right: 0;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .carrousel-item {
+      width: 80px;
+      margin: 0 0.5rem;
+    }
+  }

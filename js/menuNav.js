@@ -3,7 +3,7 @@
   nav.innerHTML = `
 
     <div class="logo">
-      <a href="index.html">Sulawesi Biological Oil</a>
+      <a href="index.html">Soulawesi Biological Oil</a>
     </div>
 
     <button id="burger" class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
