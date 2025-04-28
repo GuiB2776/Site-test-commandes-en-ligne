@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Soulawesi Essential Oil</title>
+  <meta name="description" content="Contactez Sulawesi Fair Trade pour toute question ou commande d’huiles essentielles et café bio. Nous vous répondons rapidement.">
+  <meta name="keywords" content="contact, email, téléphone, huiles essentielles, café, Sulawesi Fair Trade">
+  <!-- CSS principaux -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menuNav.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/scrollTopBtn.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <!-- FICHIERS JS defer -->
+  <script defer src="js/menuNav.js"></script>
+  <script defer src="js/accueil.js"></script> 
+  <script defer src="js/carrousel.js"></script>
+  <script defer src="js/scrollTopBtn.js"></script>
+  <script defer src="js/footer.js"></script>
+</head>
+<body>
+  <header>
+    <nav id="nav"></nav>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <h1>Contactez-nous</h1>
+      <div class="contact-grid">
+        <!-- Infos de contact -->
+        <div class="contact-info">
+          <h2>Nos coordonnées</h2>
+          <ul>
+            <li><strong>Adresse :</strong> Sitaro island / Manado <br> North Sulawesi <br> Indonesia</li>
+            <li><strong>Téléphone :</strong> +6281337370049</li>
+            <li><strong>Email :</strong> <a href="mailto:soulawesi@gmail.com">soulawesi@gmail.com</a></li>
+          </ul>
+        </div>
+
+        <!-- Formulaire -->
+        <div class="contact-form">
+          <h2>Envoyez-nous un message</h2>
+          <form action="mailto:contact@sulawesifairtrade.id"
+                method="post"
+                enctype="text/plain"
+                class="form">
+            
+            <div class="form-group">
+              <label for="name">Nom *</label>
+              <input type="text" id="name" name="Nom" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="Email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="product">Sujet :</label>
+              <select id="product" name="Produit">
+                <option value="Huiles Essentielles">Huiles Essentielles</option>
+                <option value="Mixtures">Mixtures</option>
+                <option value="Autre">Demande d'Informations</option>
+                <option value="Autre">Collaboration Commerciale</option>
+                <option value="Autre">Autre</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="Message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>  <!-- FOOTER & SOCKET -->
+        <!-- NEWSLETTER -->
+        <section class="newsletter">
+            <h2>Restez informé·e</h2>
+            <p>Inscrivez vous à notre newsletter mensuelle pour suivre nos avancements et projets.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Votre adresse e-mail" required>
+                <button type="submit" class="btn btn-primary">Je m’inscris</button>
+            </form>
+        </section>
+        <!-- SCROLL TOP BUTTON -->
+        <div id="scrollToTop">
+            &#8679; <!-- Flèche vers le haut -->
+        </div>
+        <!-- SOCKET -->
+        <div class="socket" class="borderSocket">
+            <div class="socket-left">
+                <a href="#" id="copyright-link" target="_blank"> <span id="site-name"> </span> </a> &copy; <span id="copyright"></span> <span id="copyright-text"></span> 
+            </div>
+            <div class="socket-center">
+                <a href="#" id="cgu-link"> <span id="cgu-text"></span> </a>
+            </div>
+            <div class="socket-right">
+                <a href="#" id="rgpd-link"> <span id="rgpd-text"></span></a>
+            </div>
+        </div>
+        <div id="siteManager"> Site propulsé par <a id="siteManager-link" href="#" target="_blank"> <span id="siteManager-text"></span> </div>
+    </footer>
+
+
+  <footer></footer>
+</body>
+</html>
