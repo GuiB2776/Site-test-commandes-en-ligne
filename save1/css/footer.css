@@ -6,6 +6,35 @@ footer {
   width: 100%;
 }
 
+/*-------------------------------------------------/* NEWSLETTER /*---------------------------------------------*/
+
+.newsletter {
+  padding: 4rem 2rem;
+  background-color: var(--gris);
+  text-align: center;
+}
+.newsletter h2 {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.newsletter-form input[type="email"] {
+  flex: 1;
+  max-width: 320px;
+  padding: 0.75rem;
+  border: 1px solid var(--gris);
+  border-radius: 4px;
+}
+.newsletter-form button {
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+}  
+
 .lienFooter { text-decoration: none; color: grey; transition: color 0.3s ease; }
 .lienFooter:hover { color: #ffffff; }
 

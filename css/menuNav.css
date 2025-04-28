@@ -186,6 +186,7 @@ nav .nav-links .has-dropdown.open > .dropdown {
   /* Override du padding-left pour les dropdown imbriqués */
   nav .nav-links li.has-dropdown li.has-dropdown > .dropdown-toggle {
     padding-left: 1.5rem;
+    padding-top: 0.5rem;
   }
   nav .nav-links li.has-dropdown li.has-dropdown li.has-dropdown > .dropdown-toggle {
     padding-left: 1rem;

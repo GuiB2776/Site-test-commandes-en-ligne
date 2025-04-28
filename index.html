@@ -4,10 +4,10 @@
   <!-- MÉTADONNÉES -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Soulawesi Biological Oil</title>
+  <title>Soulawesi Essential Oil</title>
   <meta name="author" content="Guillaume BULLET">
-  <meta name="description" content="...">
-  <meta name="keywords" content="...">        
+  <meta name="description" content="Découvrez Soulawesi Essential Oil : huiles essentielles et mixture extraites de la jungle indonésienne depuis des plantes endémiques de l'île de Sulawesi.">
+  <meta name="keywords" content="huiles essentielles, Sulawesi, Indonésie, agriculture biologique, essential oils, huiles, essentielles, biologique, agriculture">       
   <meta name="robots" content="index, follow">
   <meta name="googlebot" content="index, follow">
   <!-- FICHIERS CSS -->
@@ -18,9 +18,12 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/accueil.css">
   <link rel="stylesheet" href="css/carrousel.css">
-
   <!-- FICHIERS JS defer -->
   <script defer src="js/menuNav.js"></script>
+  <script defer src="js/accueil.js"></script> 
+  <script defer src="js/carrousel.js"></script>
+  <script defer src="js/scrollTopBtn.js"></script>
+  <script defer src="js/footer.js"></script>
 </head>
 <body>
   <header>
@@ -29,14 +32,13 @@
 
   <section class="hero">
     <div class="hero-content">
-      <h1>Éveillez vos sens <br> avec les huiles essentielles <br> Soulawesi Biological Oil</h1>
+      <h1>Éveillez vos sens<br> avec les huiles essentielles<br> indonésiennes</h1>
       <p>Huiles essentielles biologiques, <br> issus d'Indonésie.</p>
-      <a href="produits.html" class="btn btn-primary">Découvrir nos produits</a>
+      <a href="produits.html" class="btn btn-primary hero-btn">Découvrir nos produits</a>
     </div>
   </section>
 
   <main>
-  
     <!-- Trois piliers / arguments -->
     <section class="features">
       <div class="feature">
@@ -71,7 +73,7 @@
           <!-- <img src="img/accueil/Patchouli_Essential_Oil.png" alt="Huile Essentielle de Patchouli" style="width:200px; margin: auto 0;"> -->
           <div class="product-card-2-text">
             <!-- <h4>Patchouli</h4> -->
-            <a href="patchouli.html" class="btn btn-secondary">En savoir plus</a>
+            <a href="lemongrass.html" class="btn btn-secondary">En savoir plus</a>
           </div>
         </article>
       </div>
@@ -81,13 +83,13 @@
       <h2 class="site-sections__title">En apprendre davantage sur nous</h2>
       <div class="site-sections__grid">
         
-        <!-- 1. Produits -->
+        <!-- Produits -->
         <article class="section-card">
-          <img src="img/illu-produits.jpg" alt="Illustration Produits" class="section-card__img">
+          <img src="img/accueil/Fiole_Huile_Essentielle_Distillateurs.png" alt="Illustration Produits" class="section-card__img">
           <div class="section-card__content">
-            <h3 class="section-card__title">Nos produits</h3>
+            <h3 class="section-card__title">Toutes nos huiles</h3>
             <p class="section-card__text">
-              Découvrez notre gamme d’huiles essentielles et de cafés bio, 100 % équitables.
+              Découvrez nos différentes gammes <br> d’huiles essentielles biologiques <br> originaires d'Indonésie.
             </p>
             <a href="produits.html" class="btn btn-primary section-card__btn">
               Voir les produits
@@ -95,13 +97,13 @@
           </div>
         </article>
     
-        <!-- 2. À propos -->
+        <!-- À propos -->
         <article class="section-card">
-          <img src="img/illu-a-propos.jpg" alt="Illustration À propos" class="section-card__img">
+          <img src="img/accueil/Village_Jungle_Indonésie.png" alt="Illustration À propos" class="section-card__img">
           <div class="section-card__content">
             <h3 class="section-card__title">À propos</h3>
             <p class="section-card__text">
-              Plongez dans notre histoire et notre engagement en faveur du commerce équitable.
+              Plongez dans notre histoire et notre engagement en faveur de <br> l'île de Sulawesi.
             </p>
             <a href="a-propos.html" class="btn btn-secondary section-card__btn">
               En savoir plus
@@ -109,13 +111,13 @@
           </div>
         </article>
     
-        <!-- 3. Contact -->
+        <!-- Contact -->
         <article class="section-card">
-          <img src="img/illu-contact.jpg" alt="Illustration Contact" class="section-card__img">
+          <img src="img/accueil/Illustration_Page_contact.png" alt="Illustration Contact" class="section-card__img">
           <div class="section-card__content">
             <h3 class="section-card__title">Contact</h3>
             <p class="section-card__text">
-              Une question ? Une commande ? Écrivez-nous, nous vous répondrons rapidement.
+              Une question ? <br> Une idée ? <br> Une commande ?
             </p>
             <a href="contact.html" class="btn btn-primary section-card__btn">
               Nous contacter
@@ -126,51 +128,50 @@
     </section>
     
   
-    <!-- Témoignages clients B2C -->
-    <section class="testimonial">
-      <h2>Des clients satisfaits</h2>
-      <div class="carrousel-container">
-        <button class="carrousel-btn precedent" aria-label="Précédent">‹</button>
-        <div class="carrousel-piste-conteneur">
-          <ul class="carrousel-piste">
+    <section class="temoignages">
+      <h2 class="temoignages__titre">Témoignages clients</h2>
+      <div class="temoignages__container">
+        <button class="temoignages__btn precedent" aria-label="Précédent">‹</button>
+        <div class="temoignages__piste-conteneur">
+          <ul class="temoignages__piste">
             <!-- Duplique ces <li> autant que nécessaire -->
-            <li class="carrousel-item">
-              <blockquote>
-                “Les arômes sont incroyables et la qualité irréprochable !”  
-                <cite>— Claire D.</cite>
+            <li class="temoignage-item">
+              <blockquote class="temoignage-item__texte">
+                “Les huiles sont d’une qualité exceptionnelle, et le service est irréprochable !”
               </blockquote>
+              <cite class="temoignage-item__auteur">— Claire D.</cite>
             </li>
-            <li class="carrousel-item">
-              <blockquote>
-                “Les arômes sont incroyables et la qualité irréprochable !”  
-                <cite>— Claire D.</cite>
+            <li class="temoignage-item">
+              <blockquote class="temoignage-item__texte">
+                “Les produits sont bons et la livraison impeccable.”
               </blockquote>
+              <cite class="temoignage-item__auteur">— Julien M.</cite>
             </li>
-            <li class="carrousel-item">
-              <blockquote>
-                “Les arômes sont incroyables et la qualité irréprochable !”  
-                <cite>— Claire D.</cite>
+            <li class="temoignage-item">
+              <blockquote class="temoignage-item__texte">
+                “J'aime beaucoup la carte personnalisée envoyée avec le paquet, <br> on sent l'effort qui est mis.”
               </blockquote>
+              <cite class="temoignage-item__auteur">— Pierre A.</cite>
             </li>
-            <li class="carrousel-item">
-              <blockquote>
-                “Les arômes sont incroyables et la qualité irréprochable !”  
-                <cite>— Claire D.</cite>
+            <li class="temoignage-item">
+              <blockquote class="temoignage-item__texte">
+                “J'aime beaucoup leurs produits dans mon diffuseur, <br> mon salon respire l'Indonésie.”
               </blockquote>
+              <cite class="temoignage-item__auteur">— Guénolé C.</cite>
             </li>
-            <li class="carrousel-item">
-              <blockquote>
-                “Les arômes sont incroyables et la qualité irréprochable !”  
-                <cite>— Claire D.</cite>
-              </blockquote>
-            </li>
+            <!-- … autres témoignages … -->
           </ul>
         </div>
+        <button class="temoignages__btn suivant" aria-label="Suivant">›</button>
+      </div>
     </section>
+
+    <hr>
 
     <!-- PARTENAIRES B2B -->
     <section class="carrousel">
       <h2>Nos partenaires</h2>
+      <br><br>
       <div class="carrousel-container">
         <button class="carrousel-btn precedent" aria-label="Précédent">‹</button>
         <div class="carrousel-piste-conteneur">
@@ -249,9 +250,6 @@
     <div id="siteManager"> Site propulsé par <a id="siteManager-link" href="#" target="_blank"> <span id="siteManager-text"></span> </div>
 </footer>
 
-  <script src="js/carrousel.js"></script>
-  <script src="js/scrollTopBtn.js"></script>
-  <script src="js/footer.js"></script>
 
 </body>
 </html>

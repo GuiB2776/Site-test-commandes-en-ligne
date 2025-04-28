@@ -3,7 +3,7 @@
   nav.innerHTML = `
 
     <div class="logo">
-      <a href="index.html">Soulawesi Biological Oil</a>
+      <a href="index.html">Soulawesi Essential Oil</a>
     </div>
 
     <button id="burger" class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
@@ -20,32 +20,43 @@
           Produits
         </button>
         <ul class="dropdown">
-          <li><a href="produits.html">Tous nos produits</a></li>
-
           <!--------------- 2ᵉ niveau --------------->
           <li class="has-dropdown">
             <button class="dropdown-toggle" aria-expanded="false">
               Huiles essentielles
             </button>
             <ul class="dropdown">
-              
               <!--------------- 3ᵉ niveau --------------->
               <li class="has-dropdown">
                 <button class="dropdown-toggle dropdown-toggle-3" aria-expanded="false">
-                  Citrus
+                  Toutes nos Huiles
                 </button>
                 <ul class="dropdown">
-                  <li><a href="orange.html">Orange douce</a></li>
-                  <li><a href="citron.html">Citron</a></li>
+                  <li><a href="#">Toutes nos Huiles Essentielles</a></li>
+                  <li><a href="#">Huile Essentielle 1</a></li>
+                  <li><a href="#">Huile Essentielle 2</a></li>
+                  <li><a href="#">Huile Essentielle 3</a></li>
+                  <li><a href="#">Huile Essentielle 4</a></li>
                 </ul>
+                <li><a href="#">Patchouli</a></li>
+                <li><a href="#">Lemongrass</a></li>
               </li>
-              
-              <li><a href="menthe.html">Menthe poivrée</a></li>
-              <li><a href="lavande.html">Lavande</a></li>
             </ul>
           </li>
-
-          <li><a href="cafe.html">Café</a></li>
+          <!--------------- 2ᵉ niveau --------------->
+          <li class="has-dropdown">
+            <button class="dropdown-toggle" aria-expanded="false">
+              Mixtures
+            </button>
+            <ul class="dropdown">
+              <!--------------- 3ᵉ niveau --------------->
+                <li><a href="#">Toutes nos Mixtures</a></li>
+                <li><a href="#">Mixture 1</a></li>
+                <li><a href="#">Mixture 2</a></li>
+                <li><a href="#">Mixture 3</a></li>
+                <li><a href="#">Mixture 4</a></li>
+            </ul>
+          </li>
         </ul>
       </li>
 
