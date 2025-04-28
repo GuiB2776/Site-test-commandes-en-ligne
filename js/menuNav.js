@@ -38,7 +38,7 @@
                   <li><a href="#">Huile Essentielle 3</a></li>
                   <li><a href="#">Huile Essentielle 4</a></li>
                 </ul>
-                <li><a href="#">Patchouli</a></li>
+                <li><a href="patchouli.html">Patchouli</a></li>
                 <li><a href="#">Lemongrass</a></li>
               </li>
             </ul>

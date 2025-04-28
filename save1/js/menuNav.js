@@ -20,7 +20,7 @@
           Produits
         </button>
         <ul class="dropdown">
-          <!--------------- 2ᵉ niveau --------------->
+          <!--------------- 2ᵉ niveau - HUILES ESSENTIELLES --------------->
           <li class="has-dropdown">
             <button class="dropdown-toggle" aria-expanded="false">
               Huiles essentielles
@@ -38,12 +38,12 @@
                   <li><a href="#">Huile Essentielle 3</a></li>
                   <li><a href="#">Huile Essentielle 4</a></li>
                 </ul>
-                <li><a href="#">Patchouli</a></li>
+                <li><a href="patchouli.html">Patchouli</a></li>
                 <li><a href="#">Lemongrass</a></li>
               </li>
             </ul>
           </li>
-          <!--------------- 2ᵉ niveau --------------->
+          <!--------------- 2ᵉ niveau - MIXTURE --------------->
           <li class="has-dropdown">
             <button class="dropdown-toggle" aria-expanded="false">
               Mixtures
@@ -65,6 +65,19 @@
       <li><a href="contact.html">Contact</a></li>
 
       <li><a href="cgu-cgv.html">CGU & CGV</a></li>
+
+      <!--------------- 2ᵉ niveau - LANGUES --------------->
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false">
+          🇫🇷 🇺🇸 🇮🇩
+        </button>
+        <ul class="dropdown">
+          <!--------------- 3ᵉ niveau --------------->
+            <li><a href="#">🇫🇷</a></li>
+            <li><a href="#">🇺🇸</a></li>
+            <li><a href="#">🇮🇩</a></li>
+        </ul>
+      </li>
 
     </ul>
 

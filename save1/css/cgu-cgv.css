@@ -1,0 +1,62 @@
+.language-switcher {
+    padding: 1rem 2rem 0;
+    text-align: right;
+  }
+  .language-switcher ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+  }
+  .language-switcher li + li {
+    margin-left: 1rem;
+  }
+  .language-switcher a {
+    text-decoration: none;
+    color: var(--vert);
+    font-weight: 500;
+    transition: color var(--transition);
+  }
+  .language-switcher a.active,
+  .language-switcher a:hover {
+    color: var(--dore);
+  }
+  
+  /* Section CGU */
+  .cgu-section {
+    padding: 2rem 2rem 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: var(--vert);
+  }
+  
+  .cgu-section h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--brun);
+  }
+  
+  .cgu-section h2 {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--vert);
+  }
+  
+  .cgu-section p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  
+  .cgu-section a {
+    color: var(--dore);
+    text-decoration: none;
+    font-weight: bold;
+    transition: text-decoration var(--transition);
+  }
+  .cgu-section a:hover {
+    text-decoration: underline;
+  }
+  

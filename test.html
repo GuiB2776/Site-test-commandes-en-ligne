@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Patchouli | Soulawesi Essential Oil</title>
+        <meta name="author" content="Guillaume BULLET">
+        <meta name="description" content="Huile essentielle de Patchouli bio & fair-trade, issue de Sulawesi. Parfum boisé et terreux, idéal aromathérapie. Commande via formulaire.">
+        <meta name="keywords" content="Patchouli, huile essentielle, Sulawesi, bio, commerce équitable, aromathérapie">
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+        <!-- FICHIERS CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/menuNav.css">
+        <link rel="stylesheet" href="css/buttons.css">
+        <link rel="stylesheet" href="css/scrollTopBtn.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/patchouli.css">
+        <!-- FICHIERS JS defer -->
+        <script defer src="js/menuNav.js"></script>
+        <script defer src="js/accueil.js"></script> 
+        <script defer src="js/carrousel.js"></script>
+        <script defer src="js/scrollTopBtn.js"></script>
+        <script defer src="js/footer.js"></script>
+        <script defer src="js/patchouli.js"></script>
+
+    <style>
+        /* woocommerce.css */
+
+        /* — Breadcrumbs — */
+        .breadcrumb {
+        margin: 1rem 2rem;
+        font-size: 0.9rem;
+        color: var(--vert);
+        }
+        .breadcrumb a {
+        color: var(--vert);
+        text-decoration: none;
+        }
+        .breadcrumb span {
+        color: #555;
+        }
+
+        /* — Product Single — */
+        .product-single {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: auto;
+        padding: 2rem;
+        }
+        .product-images {
+        flex: 1 1 45%;
+        }
+        .product-summary {
+        flex: 1 1 45%;
+        }
+
+        /* Galerie */
+        .main-image img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .thumbnails {
+        display: flex;
+        gap: 0.75rem;
+        margin-top: 1rem;
+        }
+        .thumbnails .thumb {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border: 2px solid transparent;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: border-color var(--transition);
+        }
+        .thumbnails .thumb.active,
+        .thumbnails .thumb:hover {
+        border-color: var(--vert);
+        }
+
+        /* Résumé produit */
+        .product-title {
+        font-size: 2rem;
+        color: var(--brun);
+        margin-bottom: 0.5rem;
+        }
+        .price {
+        font-size: 1.5rem;
+        color: var(--dore);
+        margin-bottom: 0.5rem;
+        }
+        .rating {
+        margin-bottom: 1rem;
+        color: #d4af37;
+        }
+        .excerpt {
+        margin-bottom: 1.5rem;
+        color: var(--vert);
+        }
+
+        /* Cart */
+        .cart {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        }
+        .cart input[type="number"] {
+        width: 80px;
+        padding: 0.5rem;
+        border: 1px solid var(--gris);
+        border-radius: 4px;
+        }
+        .add-to-cart {
+        margin-left: auto;
+        }
+
+        /* Meta */
+        .product-meta {
+        font-size: 0.9rem;
+        color: #555;
+        }
+
+        /* — Tabs — */
+        .woocommerce-tabs {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 2rem;
+        }
+        .tabs {
+        display: flex;
+        list-style: none;
+        border-bottom: 2px solid var(--gris);
+        padding: 0;
+        margin: 0;
+        }
+        .tabs li {
+        margin-right: 2rem;
+        }
+        .tabs a {
+        display: block;
+        padding: 0.75rem 0;
+        color: var(--vert);
+        text-decoration: none;
+        font-weight: bold;
+        position: relative;
+        transition: color var(--transition);
+        }
+        .tabs li.active a,
+        .tabs a:hover {
+        color: var(--brun);
+        }
+        .tabs li.active a::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0; right: 0;
+        height: 4px;
+        background: var(--brun);
+        }
+        .tabs-content .panel {
+        display: none;
+        padding: 1.5rem 0;
+        color: var(--vert);
+        }
+        .tabs-content .panel.active {
+        display: block;
+        }
+        .tabs-content ul {
+        list-style: disc inside;
+        }
+
+        /* — Related Products — */
+        .related.products {
+        max-width: 1200px;
+        margin: 3rem auto;
+        padding: 0 2rem;
+        }
+        .related h2 {
+        margin-bottom: 1.5rem;
+        color: var(--brun);
+        }
+        .products-grid {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        }
+        .product-card {
+        text-align: center;
+        }
+        .product-card img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 0.75rem;
+        }
+        .product-card h3 {
+        font-size: 1.1rem;
+        color: var(--vert);
+        }
+        .product-card .price {
+        color: var(--dore);
+        margin-top: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+        .product-single { flex-direction: column; }
+        .product-images, .product-summary { flex: 1 1 100%; }
+        }
+
+        </style>
+
+    </head>
+<body>
+  <header><nav id="nav"></nav></header>
+
+  <main>
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumb">
+      <a href="index.html">Accueil</a> /
+      <a href="produits.html">Produits</a> /
+      <span>Patchouli</span>
+    </nav>
+
+    <!-- Single Product Container -->
+    <div class="product-single">
+
+      <!-- Galerie Images -->
+      <div class="product-images">
+        <div class="main-image">
+          <img id="primaryImage" src="img/accueil/Patchouli_Essential_Oil.png" alt="Huile essentielle de Patchouli">
+        </div>
+        <div class="thumbnails">
+          <img class="thumb active" src="img/accueil/Patchouli_Essential_Oil.png" data-large="img/accueil/Patchouli_Essential_Oil.png" alt="">
+          <!-- tu peux ajouter d'autres vignettes si tu as -->
+        </div>
+      </div>
+
+      <!-- Résumé produit -->
+      <div class="product-summary">
+        <h1 class="product-title">Huile essentielle de Patchouli</h1>
+        <p class="price">€12,50</p>
+        <div class="rating">
+          ★★★★☆ <span>(23 avis)</span>
+        </div>
+        <div class="excerpt">
+          Huile essentielle de Patchouli issue de Sulawesi, bio et équitable. Parfum boisé, relaxant et équilibrant.
+        </div>
+
+        <form action="mailto:contact@sulawesifairtrade.id" method="post" enctype="text/plain" class="cart">
+          <label for="qty">Quantité :</label>
+          <input type="number" id="qty" name="Quantité" value="10" min="10" step="20"> ml
+
+          <button type="submit" class="btn btn-primary add-to-cart">
+            Commander
+          </button>
+        </form>
+
+        <p class="product-meta">
+          <strong>Catégorie :</strong> Huiles essentielles<br>
+          <strong>Référence :</strong> PATCH-001
+        </p>
+      </div>
+    </div>
+
+    <!-- Onglets produit -->
+    <div class="woocommerce-tabs">
+      <ul class="tabs">
+        <li class="active"><a href="#tab-desc">Description</a></li>
+        <li><a href="#tab-carac">Caractéristiques</a></li>
+        <li><a href="#tab-reviews">Avis (23)</a></li>
+      </ul>
+      <div class="tabs-content">
+        <div id="tab-desc" class="panel active">
+          <p>Huile essentielle 100 % pure, distillée à la vapeur de feuilles de Patchouli.</p>
+        </div>
+        <div id="tab-carac" class="panel">
+          <ul>
+            <li>Origine : Sulawesi, Indonésie</li>
+            <li>Certifié bio & fair-trade</li>
+            <li>Chémotype : Pogostol</li>
+            <li>Contenance : 10, 30, 50 ml</li>
+          </ul>
+        </div>
+        <div id="tab-reviews" class="panel">
+          <article class="review">
+            <p class="review-text">“Excellente qualité, aroma douce et persistante.”</p>
+            <p class="review-author">— Marie L.</p>
+          </article>
+          <!-- autres avis ici -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Produits associés -->
+    <section class="related products">
+      <h2>Produits associés</h2>
+      <div class="products-grid">
+        <article class="product-card">
+          <img src="img/accueil/Lavender_Essential_Oil.png" alt="Huile de Lavande">
+          <h3>Lavande</h3>
+          <p class="price">€11,00</p>
+        </article>
+        <article class="product-card">
+          <img src="img/accueil/Mentha_Essential_Oil.png" alt="Menthe poivrée">
+          <h3>Menthe poivrée</h3>
+          <p class="price">€10,00</p>
+        </article>
+        <!-- ajouter d'autres cartes -->
+      </div>
+    </section>
+
+  </main>
+
+  <footer>  <!-- FOOTER & SOCKET -->
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+    <h2>Restez informé·e</h2>
+    <p>Inscrivez vous à notre newsletter mensuelle pour suivre nos avancements et projets.</p>
+    <form class="newsletter-form">
+        <input type="email" placeholder="Votre adresse e-mail" required>
+        <button type="submit" class="btn btn-primary">Je m’inscris</button>
+    </form>
+    </section>
+    <!-- SCROLL TOP BUTTON -->
+    <div id="scrollToTop">
+    &#8679; <!-- Flèche vers le haut -->
+    </div>
+    <!-- SOCKET -->
+    <div class="socket" class="borderSocket">
+        <div class="socket-left">
+            <a href="#" id="copyright-link" target="_blank"> <span id="site-name"> </span> </a> &copy; <span id="copyright"></span> <span id="copyright-text"></span> 
+        </div>
+        <div class="socket-center">
+            <a href="#" id="cgu-link"> <span id="cgu-text"></span> </a>
+        </div>
+        <div class="socket-right">
+            <a href="#" id="rgpd-link"> <span id="rgpd-text"></span></a>
+        </div>
+    </div>
+    <div id="siteManager"> Site propulsé par <a id="siteManager-link" href="#" target="_blank"> <span id="siteManager-text"></span> </div>
+</footer>
+
+  <script>
+    // productGallery.js
+document.addEventListener('DOMContentLoaded', () => {
+  const mainImg = document.getElementById('primaryImage');
+  document.querySelectorAll('.thumbnails .thumb').forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      // swap main image
+      mainImg.src = thumb.dataset.large;
+      // gestion de l'état actif
+      document.querySelectorAll('.thumbnails .thumb').forEach(t => t.classList.remove('active'));
+      thumb.classList.add('active');
+    });
+  });
+});
+  </script>
+
+    <script>
+        // productTabs.js
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs     = document.querySelectorAll('.tabs li');
+  const links    = document.querySelectorAll('.tabs a');
+  const panels   = document.querySelectorAll('.tabs-content .panel');
+
+  links.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = link.getAttribute('href').substring(1);
+
+      // reset all
+      tabs.forEach(li => li.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+
+      // activate chosen
+      const parentLi = link.parentElement;
+      parentLi.classList.add('active');
+      document.getElementById(target).classList.add('active');
+    });
+  });
+});
+    </script>
+
+
+
+
+</body>
+</html>

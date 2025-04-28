@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patchouli | Soulawesi Essential Oil</title>
+  <meta name="author" content="Guillaume BULLET">
+  <meta name="description" content="Huile essentielle de Patchouli bio & fair-trade, issue de Sulawesi. Parfum boisé et terreux, idéal aromathérapie. Commande via formulaire.">
+  <meta name="keywords" content="Patchouli, huile essentielle, Sulawesi, bio, commerce équitable, aromathérapie">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <!-- FICHIERS CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menuNav.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/scrollTopBtn.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/patchouli.css">
+  <!-- FICHIERS JS defer -->
+  <script defer src="js/menuNav.js"></script>
+  <script defer src="js/accueil.js"></script> 
+  <script defer src="js/carrousel.js"></script>
+  <script defer src="js/scrollTopBtn.js"></script>
+  <script defer src="js/footer.js"></script>
+  <script defer src="js/patchouli.js"></script>
+</head>
+<body>
+  <header>
+    <nav id="nav"></nav>
+  </header>
+
+  <main>
+    <!-- Hero produit -->
+    <section class="product-hero">
+        <div class="product-info">
+            <h1>Huile essentielle de Patchouli</h1>
+            <h2>Patchouli</h2>
+            <p>
+                Notre huile essentielle de Patchouli est produite sur l’île de Sulawesi (Indonésie), selon des pratiques 
+                biologiques et équitables. Son parfum boisé et terreux est apprécié pour l’aromathérapie, la relaxation 
+                et la création d’une atmosphère chaleureuse.
+            </p>
+        </div>
+        <!-- Accordéon Horizontal -->
+        <div class="product-accordion">
+            <div class="product-accordion__tabs">
+            <button class="product-accordion__tab active" data-target="desc">Description</button>
+            <button class="product-accordion__tab" data-target="carac">Caractéristiques</button>
+            <button class="product-accordion__tab" data-target="avantages">Avantages</button>
+            <button class="product-accordion__tab" data-target="utilisations">Utilisations</button>
+            </div>
+            <div class="product-accordion__contents">
+            <div id="desc" class="product-accordion__content active">
+                <p>Huile essentielle 100 % pure et naturelle, obtenue par distillation à la vapeur de feuilles de Patchouli.</p>
+            </div>
+            <div id="carac" class="product-accordion__content">
+                <ul>
+                <li>Origine : Sulawesi, Indonésie</li>
+                <li>100 % bio & fair-trade</li>
+                <li>Chémotype : <em>Pogostol</em></li>
+                <li>Contenance : 10 ml, 30 ml, 50 ml</li>
+                </ul>
+            </div>
+            <div id="avantages" class="product-accordion__content">
+                <ul>
+                <li>Propriétés relaxantes & équilibrantes</li>
+                <li>Aide à réduire le stress</li>
+                <li>Parfum boisé et terreux</li>
+                </ul>
+            </div>
+            <div id="utilisations" class="product-accordion__content">
+                <ul>
+                <li>Aromathérapie (diffuseur)</li>
+                <li>Massage (diluée dans une huile végétale)</li>
+                <li>Bain parfumé</li>
+                </ul>
+            </div>
+        </div>
+      </div>
+      <!-- Illustration produit -->
+      <div class="product-image">
+        <img src="img/accueil/Patchouli_Essential_Oil.png" alt="Huile essentielle de Patchouli">
+      </div>
+    </section>
+
+    <!-- Commande -->
+    <section class="product-order">
+      <!-- Quantités -->
+      <div class="product-quantities">
+        <h3>Quantités disponibles</h3>
+        <div class="quantities">
+          <button type="button" class="quantity-btn">10 ml</button>
+          <button type="button" class="quantity-btn">30 ml</button>
+          <button type="button" class="quantity-btn">50 ml</button>
+        </div>
+      </div>
+
+      <!-- Formulaire -->
+      <div class="product-form">
+        <h3>Commander</h3>
+        <form action="mailto:contact@sulawesifairtrade.id" method="post" enctype="text/plain">
+          <div class="form-group">
+            <label for="quantite">Quantité souhaitée</label>
+            <input type="text" id="quantite" name="Quantité souhaitée" required>
+          </div>
+          <div class="form-group">
+            <label for="nom">Prénom et Nom</label>
+            <input type="text" id="nom" name="Nom" required>
+          </div>
+          <div class="form-group">
+            <label for="entreprise">Nom de l’entreprise</label>
+            <input type="text" id="entreprise" name="Entreprise">
+          </div>
+          <div class="form-group">
+            <label for="email">Adresse e-mail</label>
+            <input type="email" id="email" name="Email" required>
+          </div>
+          <div class="form-group">
+            <label for="email-confirm">Confirmez l’adresse e-mail</label>
+            <input type="email" id="email-confirm" name="Confirmation Email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="Message" rows="4"></textarea>
+          </div>
+          <div class="form-group form-group--checkbox">
+            <input type="checkbox" id="cgu" name="CGU" required>
+            <label for="cgu">J’accepte les <a href="cgu.html">conditions d’utilisation</a></label>
+          </div>
+          <button type="submit" class="btn btn-primary">Envoyer</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>  <!-- FOOTER & SOCKET -->
+        <!-- NEWSLETTER -->
+        <section class="newsletter">
+        <h2>Restez informé·e</h2>
+        <p>Inscrivez vous à notre newsletter mensuelle pour suivre nos avancements et projets.</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Votre adresse e-mail" required>
+            <button type="submit" class="btn btn-primary">Je m’inscris</button>
+        </form>
+        </section>
+        <!-- SCROLL TOP BUTTON -->
+        <div id="scrollToTop">
+        &#8679; <!-- Flèche vers le haut -->
+        </div>
+        <!-- SOCKET -->
+        <div class="socket" class="borderSocket">
+            <div class="socket-left">
+                <a href="#" id="copyright-link" target="_blank"> <span id="site-name"> </span> </a> &copy; <span id="copyright"></span> <span id="copyright-text"></span> 
+            </div>
+            <div class="socket-center">
+                <a href="#" id="cgu-link"> <span id="cgu-text"></span> </a>
+            </div>
+            <div class="socket-right">
+                <a href="#" id="rgpd-link"> <span id="rgpd-text"></span></a>
+            </div>
+        </div>
+        <div id="siteManager"> Site propulsé par <a id="siteManager-link" href="#" target="_blank"> <span id="siteManager-text"></span> </div>
+    </footer>
+</body>
+</html>

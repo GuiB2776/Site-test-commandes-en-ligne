@@ -1,0 +1,199 @@
+/* product.css */
+
+/* === Hero produit === */
+.product-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  @media (max-width: 768px) {
+    .product-hero {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  .product-info {
+    flex: 1;
+    padding-right: 2rem;
+  }
+  .product-info h1 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--vert);
+  }
+  .product-info h2 {
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+    color: var(--brun);
+  }
+  .product-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--vert);
+  }
+  .product-image img {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+  }
+  
+  /* === Section commande === */
+  .product-order {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    background: var(--blanc);
+  }
+  @media (max-width: 768px) {
+    .product-order {
+      flex-direction: column;
+    }
+  }
+  .product-quantities,
+  .product-form {
+    flex: 1;
+  }
+  .product-quantities {
+    padding-right: 2rem;
+  }
+  .product-quantities h3,
+  .product-form h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--vert);
+  }
+  
+  /* ≡ Boutons de quantité */
+  .quantities {
+    display: flex;
+    gap: 1rem;
+  }
+  .quantity-btn {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--gris);
+    background: var(--blanc);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background var(--transition), border-color var(--transition);
+  }
+  .quantity-btn:hover,
+  .quantity-btn.active {
+    background: var(--gris);
+    border-color: var(--vert);
+  }
+  
+  /* === Formulaire === */
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--vert);
+  }
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--gris);
+    border-radius: 4px;
+    font-size: 1rem;
+    color: var(--vert);
+    transition: border-color var(--transition);
+  }
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--vert);
+  }
+  .form-group--checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .form-group--checkbox label {
+    margin: 0;
+    font-weight: normal;
+  }
+  
+  /* === Bouton d’envoi === */
+  .btn-primary {
+    padding: 0.75rem 1.5rem;
+    background: var(--vert);
+    color: var(--blanc);
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background var(--transition);
+  }
+  .btn-primary:hover {
+    background: var(--dore);
+  }
+
+
+
+/* ACCORDEON */
+
+/* === Accordion horizontal === */
+.product-accordion {
+  margin-top: 2rem;
+}
+.product-accordion__tabs {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 2px solid var(--gris);
+}
+.product-accordion__tab {
+  background: none;
+  border: none;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--vert);
+  cursor: pointer;
+  position: relative;
+  transition: color var(--transition);
+}
+.product-accordion__tab.active {
+  color: var(--brun);
+}
+.product-accordion__tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--brun);
+}
+.product-accordion__contents {
+  padding: 1.5rem 0;
+}
+.product-accordion__content {
+  display: none;
+  font-size: 0.95rem;
+  color: var(--vert);
+}
+.product-accordion__content.active {
+  display: block;
+}
+.product-accordion__content ul {
+  list-style: disc inside;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+  
+
