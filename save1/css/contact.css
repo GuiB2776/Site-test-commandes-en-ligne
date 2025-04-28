@@ -1,0 +1,93 @@
+/* Section contact */
+.contact-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: var(--vert);
+  }
+  
+  .contact-section h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--brun);
+  }
+  
+  /* Grid desktop/ tablette */
+  .contact-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  /* Bloc infos */
+  .contact-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--vert);
+  }
+  
+  .contact-info ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-info li {
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+  
+  .contact-info a {
+    color: var(--dore);
+    text-decoration: none;
+  }
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Formulaire */
+  .contact-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--vert);
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--gris);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color var(--transition);
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--vert);
+  }
+  
+  /* Bouton */
+  .form .btn {
+    align-self: flex-start;
+  }
+  

@@ -1,0 +1,39 @@
+/* rgpd.css */
+
+.rgpd-section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: var(--vert);
+  }
+  
+  .rgpd-section h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--brun);
+  }
+  
+  .rgpd-section h2 {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--vert);
+  }
+  
+  .rgpd-section p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  
+  .rgpd-section a {
+    color: var(--dore);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .rgpd-section a:hover {
+    text-decoration: underline;
+  }
+  
