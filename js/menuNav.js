@@ -60,7 +60,7 @@
         </ul>
       </li>
 
-      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="#">À propos</a></li>
 
       <li><a href="contact.html">Contact</a></li>
 
