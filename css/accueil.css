@@ -70,14 +70,12 @@ margin-bottom: 2rem;
 
 @media (max-width: 768px) {
     .features {
-        display: block;
+        display: flex;
+        flex-direction: column;
         justify-content: space-around;
         text-align: center;
-        place-items: anchor-center;
-        justify-items: anchor-center;
-        align-items: anchor-center;
         align-items: center;
-        justify-items: center;
+        justify-content: center;
         padding: 4rem 2rem;
         background-color: var(--gris);
     }
