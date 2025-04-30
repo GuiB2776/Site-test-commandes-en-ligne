@@ -168,28 +168,6 @@ font-size: 1.1rem;
     }
 }
 
-/*-------------------------------------------------/* TEMOIGNAGES /*------------------------------------------------*/
-
-.testimonial {
-padding: 4rem 2rem;
-background-color: var(--blanc);
-text-align: center;
-}
-.testimonial h2 {
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
-    color: var(--brun);
-  }
-.testimonial blockquote {
-font-size: 1.3rem;
-font-style: italic;
-margin-bottom: 1rem;
-}
-.testimonial cite {
-color: var(--vert);
-font-weight: bold;
-}
-
 /*-------------------------------------------------/* PRESENTATION DES PAGES /*------------------------------------------------*/
 
 .site-sections {
@@ -331,8 +309,10 @@ font-weight: bold;
   }
   .temoignages__btn.precedent {
     left: 0;
+    color: black;
   }
   .temoignages__btn.suivant {
     right: 0;
+    color: black;
   }
   
