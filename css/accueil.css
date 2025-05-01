@@ -297,7 +297,7 @@ font-size: 1.1rem;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(248,248,240,0.8);
+    background: rgba(248, 248, 240, 0);
     border: none;
     font-size: 2rem;
     padding: 0.5rem 1rem;
@@ -315,5 +315,22 @@ font-size: 1.1rem;
   .temoignages__btn.suivant {
     right: 0;
     color: black;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .temoignages__btn {
+      font-size: 2rem;
+    }
+    .temoignages__btn.precedent {
+      left: 0;
+      margin-top: 60px;
+      color: black;
+    }
+    .temoignages__btn.suivant {
+      right: 0;
+      margin-top: 60px;
+      color: black;
+    }
   }
   
