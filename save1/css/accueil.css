@@ -70,10 +70,12 @@ margin-bottom: 2rem;
 
 @media (max-width: 768px) {
     .features {
-        display: block;
+        display: flex;
+        flex-direction: column;
         justify-content: space-around;
         text-align: center;
-        place-items: anchor-center;
+        align-items: center;
+        justify-content: center;
         padding: 4rem 2rem;
         background-color: var(--gris);
     }
@@ -156,37 +158,16 @@ font-size: 1.1rem;
 
 @media (max-width: 768px) {
     .product-card-1 {
-        width: 100%;
-        height: 50vh;
+        width: 300px;
+        height: 350px;
         margin-bottom: 50px;
     }
     .product-card-2 {
-        width: 100%;
-        height: 50vh;
+        width: 300px;
+        height: 350px;
     }
 }
 
-/*-------------------------------------------------/* TEMOIGNAGES /*------------------------------------------------*/
-
-.testimonial {
-padding: 4rem 2rem;
-background-color: var(--blanc);
-text-align: center;
-}
-.testimonial h2 {
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
-    color: var(--brun);
-  }
-.testimonial blockquote {
-font-size: 1.3rem;
-font-style: italic;
-margin-bottom: 1rem;
-}
-.testimonial cite {
-color: var(--vert);
-font-weight: bold;
-}
 
 /*-------------------------------------------------/* PRESENTATION DES PAGES /*------------------------------------------------*/
 
@@ -316,7 +297,7 @@ font-weight: bold;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(248,248,240,0.8);
+    background: rgba(248, 248, 240, 0);
     border: none;
     font-size: 2rem;
     padding: 0.5rem 1rem;
@@ -329,8 +310,27 @@ font-weight: bold;
   }
   .temoignages__btn.precedent {
     left: 0;
+    color: black;
   }
   .temoignages__btn.suivant {
     right: 0;
+    color: black;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .temoignages__btn {
+      font-size: 2rem;
+    }
+    .temoignages__btn.precedent {
+      left: 0;
+      margin-top: 60px;
+      color: black;
+    }
+    .temoignages__btn.suivant {
+      right: 0;
+      margin-top: 60px;
+      color: black;
+    }
   }
   
