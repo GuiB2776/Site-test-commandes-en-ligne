@@ -22,15 +22,11 @@
         <ul class="dropdown">
           <!--------------- 2ᵉ niveau - HUILES ESSENTIELLES --------------->
           <li class="has-dropdown">
-            <button class="dropdown-toggle" aria-expanded="false">
-              Huiles essentielles
-            </button>
+            <button class="dropdown-toggle" …>Huiles essentielles</button>
             <ul class="dropdown">
-              <!--------------- 3ᵉ niveau --------------->
+              <!-- 3ᵉ niveau : sous-menu "Toutes nos Huiles" -->
               <li class="has-dropdown">
-                <button class="dropdown-toggle dropdown-toggle-3" aria-expanded="false">
-                  Toutes nos Huiles
-                </button>
+                <button class="dropdown-toggle dropdown-toggle-3" …>Toutes nos Huiles</button>
                 <ul class="dropdown">
                   <li><a href="#">Toutes nos Huiles Essentielles</a></li>
                   <li><a href="#">Huile Essentielle 1</a></li>
@@ -38,9 +34,10 @@
                   <li><a href="#">Huile Essentielle 3</a></li>
                   <li><a href="#">Huile Essentielle 4</a></li>
                 </ul>
-                <li><a href="patchouli.html">Patchouli</a></li>
-                <li><a href="test.html">Lemongrass</a></li>
               </li>
+              <!-- 2ᵉ niveau : liens directs -->
+              <li><a href="patchouli.html">Patchouli</a></li>
+              <li><a href="test.html">Lemongrass</a></li>
             </ul>
           </li>
           <!--------------- 2ᵉ niveau - MIXTURE --------------->
@@ -103,21 +100,18 @@
   });
 
   // Pour chaque dropdown, gestion du clic
-  navLinks.querySelectorAll('.has-dropdown')
-    .forEach(li => {
-      li.addEventListener('click', e => {
-        // ne se déclenche que si mobile
-        if (window.innerWidth <= 768) {
-          // empêcher le lien par défaut et la bulle d'événement
-          e.preventDefault();
-          e.stopPropagation();
-          // même logique que pour le bouton
-          const btn = li.querySelector('.dropdown-toggle');
-          const isOpen = li.classList.toggle('open');
-          btn.setAttribute('aria-expanded', isOpen);
-        }
-      });
+  navLinks.querySelectorAll('.dropdown-toggle')
+  .forEach(btn => {
+    btn.addEventListener('click', e => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        e.stopPropagation();
+        const li = btn.closest('.has-dropdown');
+        const isOpen = li.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen);
+      }
     });
+  });
 
   // Fermer dropdown si on clique en dehors
   document.addEventListener('click', (e) => {
