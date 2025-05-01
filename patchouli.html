@@ -18,8 +18,6 @@
   <link rel="stylesheet" href="css/patchouli.css">
   <!-- FICHIERS JS defer -->
   <script defer src="js/menuNav.js"></script>
-  <script defer src="js/accueil.js"></script> 
-  <script defer src="js/carrousel.js"></script>
   <script defer src="js/scrollTopBtn.js"></script>
   <script defer src="js/footer.js"></script>
   <script defer src="js/patchouli.js"></script>
@@ -32,49 +30,53 @@
   <main>
     <!-- Hero produit -->
     <section class="product-hero">
+      <div class="product-hero-text">
         <div class="product-info">
-            <h1>Huile essentielle de Patchouli</h1>
-            <h2>Patchouli</h2>
-            <p>
-                Notre huile essentielle de Patchouli est produite sur l’île de Sulawesi (Indonésie), selon des pratiques 
-                biologiques et équitables. Son parfum boisé et terreux est apprécié pour l’aromathérapie, la relaxation 
-                et la création d’une atmosphère chaleureuse.
-            </p>
+          <h1>Patchouli</h1>
+          <br>
+          <h2>Huile Essentielle</h2>
+          <br>
+          <p>
+              Notre huile essentielle de Patchouli est produite sur l’île de Sulawesi (Indonésie), selon des pratiques 
+              biologiques et équitables. Son parfum boisé et terreux est apprécié pour l’aromathérapie, la relaxation 
+              et la création d’une atmosphère chaleureuse.
+          </p>
         </div>
         <!-- Accordéon Horizontal -->
         <div class="product-accordion">
-            <div class="product-accordion__tabs">
+          <div class="product-accordion__tabs">
             <button class="product-accordion__tab active" data-target="desc">Description</button>
             <button class="product-accordion__tab" data-target="carac">Caractéristiques</button>
             <button class="product-accordion__tab" data-target="avantages">Avantages</button>
             <button class="product-accordion__tab" data-target="utilisations">Utilisations</button>
-            </div>
-            <div class="product-accordion__contents">
+          </div>
+          <div class="product-accordion__contents">
             <div id="desc" class="product-accordion__content active">
                 <p>Huile essentielle 100 % pure et naturelle, obtenue par distillation à la vapeur de feuilles de Patchouli.</p>
             </div>
             <div id="carac" class="product-accordion__content">
-                <ul>
+              <ul>
                 <li>Origine : Sulawesi, Indonésie</li>
                 <li>100 % bio & fair-trade</li>
                 <li>Chémotype : <em>Pogostol</em></li>
                 <li>Contenance : 10 ml, 30 ml, 50 ml</li>
-                </ul>
+              </ul>
             </div>
             <div id="avantages" class="product-accordion__content">
-                <ul>
+              <ul>
                 <li>Propriétés relaxantes & équilibrantes</li>
                 <li>Aide à réduire le stress</li>
                 <li>Parfum boisé et terreux</li>
-                </ul>
+              </ul>
             </div>
             <div id="utilisations" class="product-accordion__content">
-                <ul>
+              <ul>
                 <li>Aromathérapie (diffuseur)</li>
                 <li>Massage (diluée dans une huile végétale)</li>
                 <li>Bain parfumé</li>
-                </ul>
+              </ul>
             </div>
+          </div>
         </div>
       </div>
       <!-- Illustration produit -->
@@ -92,8 +94,11 @@
           <button type="button" class="quantity-btn">10 ml</button>
           <button type="button" class="quantity-btn">30 ml</button>
           <button type="button" class="quantity-btn">50 ml</button>
+          <button type="button" class="quantity-btn">150 ml</button>
         </div>
       </div>
+
+      <br><br>
 
       <!-- Formulaire -->
       <div class="product-form">
@@ -125,7 +130,7 @@
           </div>
           <div class="form-group form-group--checkbox">
             <input type="checkbox" id="cgu" name="CGU" required>
-            <label for="cgu">J’accepte les <a href="cgu.html">conditions d’utilisation</a></label>
+            <label for="cgu">J’accepte les <a href="cgu-cgv.html">conditions d’utilisation</a></label>
           </div>
           <button type="submit" class="btn btn-primary">Envoyer</button>
         </form>

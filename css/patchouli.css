@@ -1,32 +1,47 @@
-/* product.css */
+/*-----------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------/* PRODUCT /*-------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------*/
 
-/* === Hero produit === */
-.product-hero {
+/*------------------------------------------------/* PRODUCT HERO /*-----------------------------------------------*/
+  .product-hero {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start; /* haut-align pour que le wrapper démarre au top */
     padding: 4rem 2rem;
     max-width: 1200px;
     margin: auto;
+  }
+  .product-hero-text {
+    display: flex;
+    flex-direction: column;  /* empiler info + accordéon */
+    flex: 1;                 /* occupe tout l’espace disponible */
+    padding-right: 2rem;     /* espace entre texte et image */
   }
   @media (max-width: 768px) {
     .product-hero {
       flex-direction: column;
       text-align: center;
+      align-items: center;
+    }
+    .product-hero-text {
+      padding-right: 0;
+      margin-bottom: 2rem;
     }
   }
+
   .product-info {
     flex: 1;
     padding-right: 2rem;
+    margin-bottom:2rem;
   }
   .product-info h1 {
-    font-size: 1.2rem;
+    font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--vert);
   }
   .product-info h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin: 0.5rem 0;
     color: var(--brun);
   }
@@ -35,18 +50,86 @@
     line-height: 1.6;
     color: var(--vert);
   }
+  @media (max-width: 768px) {
+    .product-info {
+      padding-right: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .product-image {
+    flex: 1;                /* occupe l’autre moitié */
+    display: flex;
+    justify-content: center; /* centre l’image horizontalement */
+    align-items: center;     /* et verticalement */
+  }
   .product-image img {
     max-width: 300px;
     width: 100%;
     border-radius: 8px;
     display: block;
   }
-  
-  /* === Section commande === */
+
+  /*------------------------------------------------/* ACCORDEON INFOS /*-----------------------------------------------*/
+  .product-accordion {
+    margin-top: 2rem;
+  }
+  .product-accordion__tabs {
+    display: flex;
+    gap: 1rem;
+    border-bottom: 2px solid var(--gris);
+  }
+  .product-accordion__tab {
+    background: none;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--vert);
+    cursor: pointer;
+    position: relative;
+    transition: color var(--transition);
+  }
+  .product-accordion__tab.active {
+    color: var(--brun);
+  }
+  .product-accordion__tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--brun);
+  }
+  .product-accordion__contents {
+    padding: 1.5rem 0;
+  }
+  .product-accordion__content {
+    display: none;
+    font-size: 0.95rem;
+    color: var(--vert);
+  }
+  .product-accordion__content.active {
+    display: block;
+  }
+  .product-accordion__content ul {
+    list-style: disc inside;
+    margin: 0;
+    padding-left: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .product-accordion__tabs {
+      display: block;
+    }
+  }
+ 
+/*------------------------------------------------/* SECTION COMMANDE /*-----------------------------------------------*/
   .product-order {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     padding: 2rem;
     max-width: 1200px;
     margin: auto;
@@ -71,7 +154,7 @@
     color: var(--vert);
   }
   
-  /* ≡ Boutons de quantité */
+/*------------------------------------------------/* QUANTITES /*-----------------------------------------------*/
   .quantities {
     display: flex;
     gap: 1rem;
@@ -90,7 +173,7 @@
     border-color: var(--vert);
   }
   
-  /* === Formulaire === */
+/*------------------------------------------------/* FORMULAIRE DE COMMANDE /*-----------------------------------------------*/
   .form-group {
     margin-bottom: 1rem;
   }
@@ -117,6 +200,7 @@
   }
   .form-group--checkbox {
     display: flex;
+    flex-direction: column-reverse;
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 1.5rem;
@@ -126,7 +210,7 @@
     font-weight: normal;
   }
   
-  /* === Bouton d’envoi === */
+/*------------------------------------------------/* BOUTON D'ENVOI /*-----------------------------------------------*/
   .btn-primary {
     padding: 0.75rem 1.5rem;
     background: var(--vert);
@@ -143,57 +227,4 @@
   }
 
 
-
-/* ACCORDEON */
-
-/* === Accordion horizontal === */
-.product-accordion {
-  margin-top: 2rem;
-}
-.product-accordion__tabs {
-  display: flex;
-  gap: 1rem;
-  border-bottom: 2px solid var(--gris);
-}
-.product-accordion__tab {
-  background: none;
-  border: none;
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  font-weight: bold;
-  color: var(--vert);
-  cursor: pointer;
-  position: relative;
-  transition: color var(--transition);
-}
-.product-accordion__tab.active {
-  color: var(--brun);
-}
-.product-accordion__tab.active::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--brun);
-}
-.product-accordion__contents {
-  padding: 1.5rem 0;
-}
-.product-accordion__content {
-  display: none;
-  font-size: 0.95rem;
-  color: var(--vert);
-}
-.product-accordion__content.active {
-  display: block;
-}
-.product-accordion__content ul {
-  list-style: disc inside;
-  margin: 0;
-  padding-left: 1rem;
-}
-
-  
 
