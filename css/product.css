@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start; /* haut-align pour que le wrapper démarre au top */
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
     max-width: 1200px;
     margin: auto;
   }
@@ -103,7 +103,7 @@
     background: var(--brun);
   }
   .product-accordion__contents {
-    padding: 1.5rem 0;
+    padding-top: 1.5rem;
   }
   .product-accordion__content {
     display: none;
@@ -123,8 +123,11 @@
     .product-accordion__tabs {
       display: block;
     }
+    .product-accordion__contents {
+      text-align: start;
+    }
   }
- 
+
 /*------------------------------------------------/* SECTION COMMANDE /*-----------------------------------------------*/
   .product-order {
     display: flex;
@@ -147,13 +150,21 @@
   .product-quantities {
     padding-right: 2rem;
   }
+  .product-form {
+    margin-top: 0;
+  }
+  @media (max-width: 768px) {
+    .product-form {
+      margin-top: 4rem;
+    }
+  }
   .product-quantities h3,
   .product-form h3 {
     font-size: 1.25rem;
     margin-bottom: 1rem;
     color: var(--vert);
   }
-  
+
 /*------------------------------------------------/* QUANTITES /*-----------------------------------------------*/
   .quantities {
     display: flex;
@@ -172,7 +183,7 @@
     background: var(--gris);
     border-color: var(--vert);
   }
-  
+
 /*------------------------------------------------/* FORMULAIRE DE COMMANDE /*-----------------------------------------------*/
   .form-group {
     margin-bottom: 1rem;
@@ -209,7 +220,7 @@
     margin: 0;
     font-weight: normal;
   }
-  
+
 /*------------------------------------------------/* BOUTON D'ENVOI /*-----------------------------------------------*/
   .btn-primary {
     padding: 0.75rem 1.5rem;
