@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Devis | Soulawesi Essential Oil</title>
+  <meta name="author" content="Guillaume BULLET">
+  <meta name="description" content="Générateur de devis.">
+  <meta name="keywords" content="générateur, devis">
+
+  <!-- CSS du projet -->
+  <link rel="stylesheet" href="css/devis.css">
+
+  <!-- jsPDF & html2canvas pour l’export PDF -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script defer src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script defer src="js/devis.js"></script>
+</head>
+<body>
+  <header>
+    <nav id="nav"></nav>
+  </header>
+
+  <main class="container" id="quote-container">
+    <h1>Générateur de devis</h1>
+
+    <form id="quote-form">
+      <!-- 1. Informations de l’entreprise (statique) -->
+      <section class="company-info">
+        <img src="img/logo.png" alt="Logo entreprise" id="company-logo">
+        <h2 id="company-name">Soulawesi Essential Oil</h2>
+        <p id="company-address">123 Rue de l'Exemple, 75000 Paris</p>
+        <p>SIRET: 123 456 789 00000 | APE: 0123Z | TVA intracom.: FR12 345678901</p>
+        <p>Contact: contact@example.com | 01 23 45 67 89</p>
+      </section>
+
+      <!-- 2. Numérotation & dates -->
+      <div class="field"><label for="quote-number">Numéro de devis :</label><input type="text" id="quote-number" required></div>
+      <div class="field"><label for="quote-date">Date d’émission :</label><input type="date" id="quote-date" required></div>
+      <div class="field"><label for="quote-validity">Validité jusqu’au :</label><input type="date" id="quote-validity" required></div>
+
+      <!-- 3. Objet du devis -->
+      <div class="field"><label for="quote-title">Objet du devis :</label><input type="text" id="quote-title"></div>
+
+      <!-- 4. Informations client -->
+      <div class="field"><label for="client-name">Nom du client :</label><input type="text" id="client-name" required></div>
+      <div class="field"><label for="client-address">Adresse du client :</label><input type="text" id="client-address"></div>
+      <div class="field"><label for="client-contact">Personne à contacter :</label><input type="text" id="client-contact"></div>
+
+      <!-- 5. Détail des prestations / articles -->
+      <h2>Prestations</h2>
+      <table id="items-table"><thead><tr><th>Description</th><th>Quantité</th><th>PU (€)</th><th>Total ligne (€)</th><th></th></tr></thead><tbody></tbody></table>
+      <button type="button" id="add-item">Ajouter une ligne</button>
+
+      <!-- 6. TVA & Totaux -->
+      <div class="field tax-field"><label for="tax-rate">Taux de TVA (%):</label><input type="number" id="tax-rate" value="20" step="0.01"></div>
+      <div class="totals">
+        <p>Total HT : €<span id="total-ht">0.00</span></p>
+        <p>TVA (<span id="tax-rate-display">20%</span>) : €<span id="tax-amount">0.00</span></p>
+        <p><strong>Total TTC : €<span id="quote-total-ttc">0.00</span></strong></p>
+      </div>
+
+      <!-- 7. Modalités financières -->
+      <h2>Modalités financières</h2>
+      <div class="field"><label for="payment-terms">Conditions de paiement :</label><input type="text" id="payment-terms" placeholder="Ex. 30 j. fin de mois"></div>
+      <div class="field"><label for="penalty-terms">Pénalités de retard :</label><input type="text" id="penalty-terms" placeholder="Ex. 10 % par mois"></div>
+      <div class="field"><label for="discount-terms">Escompte :</label><input type="text" id="discount-terms" placeholder="Ex. 2 % si paiement sous 8 j."></div>
+
+      <!-- 8. Modalités pratiques -->
+      <h2>Modalités pratiques</h2>
+      <div class="field"><label for="delivery-time">Délai de réalisation :</label><input type="text" id="delivery-time" placeholder="Ex. 2 semaines"></div>
+      <div class="field"><label for="execution">Lieu d’exécution :</label><input type="text" id="execution" placeholder="Ex. À domicile"></div>
+
+      <!-- 9. Mentions légales -->
+      <h2>Mentions légales</h2>
+      <div class="field"><label for="general-terms">CGV :</label><textarea id="general-terms">Voir nos CGV sur le site.</textarea></div>
+      <div class="field"><label for="other-clauses">Autres mentions :</label><textarea id="other-clauses"></textarea></div>
+
+      <!-- 10. Coordonnées bancaires -->
+      <h2>Coordonnées bancaires</h2>
+      <div class="field"><label for="bank-name">Banque :</label><input type="text" id="bank-name"></div>
+      <div class="field"><label for="iban">IBAN :</label><input type="text" id="iban"></div>
+      <div class="field"><label for="bic">BIC/SWIFT :</label><input type="text" id="bic"></div>
+
+      <!-- 11. Signature -->
+      <h2>Signature</h2>
+      <div class="field"><label for="quote-place">Lieu de signature :</label><input type="text" id="quote-place"></div>
+      <div class="field"><label for="quote-sign-date">Date de signature :</label><input type="date" id="quote-sign-date"></div>
+      <p>Bon pour accord,</p>
+      <div class="signature-box"></div>
+
+      <!-- Actions -->
+      <div class="actions">
+        <button type="submit">Enregistrer le devis</button>
+        <button type="button" id="clear-all">Tout supprimer</button>
+        <button type="button" id="download-quote">Télécharger le devis</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

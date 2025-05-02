@@ -37,7 +37,7 @@
               </li>
               <!-- 2ᵉ niveau : liens directs -->
               <li><a href="patchouli.html">Patchouli</a></li>
-              <li><a href="test.html">Lemongrass</a></li>
+              <li><a href="lemongrass.html">Lemongrass</a></li>
             </ul>
           </li>
           <!--------------- 2ᵉ niveau - MIXTURE --------------->
@@ -60,8 +60,6 @@
       <li><a href="#">À propos</a></li>
 
       <li><a href="contact.html">Contact</a></li>
-
-      <li><a href="cgu-cgv.html">CGU & CGV</a></li>
 
       <!--------------- 2ᵉ niveau - LANGUES --------------->
       <li class="has-dropdown">
